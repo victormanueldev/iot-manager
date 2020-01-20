@@ -1,0 +1,13 @@
+ /** Alerts **/
+.alert {
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+
+    .close-alert {
+        cursor: pointer;
+    }
+}

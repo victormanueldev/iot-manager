@@ -3,6 +3,7 @@ module.exports = {
     colors: {
       indigo: {
         100: '#6c63ff',
+        200: '#b3a7dd',
         300: '#494ae1',
         500: '#1932c4',
         700: '#001ca7',
@@ -10,7 +11,10 @@ module.exports = {
       },
       blue: '#007ace',
       green: '#54CC3B',
-      red: '#F20D30',
+      red: {
+        100: '#e49c93',
+        900: '#f20d30'
+      },
       gray: {
         100: '#EDF2F6',
         300: '#777297',
@@ -34,7 +38,7 @@ module.exports = {
       '8': '8px',
     },
     screens: {
-      'xs': '360px',
+      'xs': '0px',
       'sm': '536px',
       // => @media (min-width: 640px) { ... }
 
@@ -46,6 +50,12 @@ module.exports = {
 
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
+    },
+    inset: {
+      '0'     : 0,
+      'auto'  : 'auto',
+      '23'    : '23px',
+      '10'    : '10px'
     },
     extend: {}
   },
