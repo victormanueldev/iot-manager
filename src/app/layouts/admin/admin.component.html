@@ -1,4 +1,97 @@
-<p>admin works!</p>
-<a routerLink="home">Home</a>
-<a routerLink="details">Details</a>
-<router-outlet></router-outlet>
+
+    <div class="flex flex-row items-start justify-between bg-gray-500 ">
+        <!-- Sidebar -->
+        <nav class="flex-col  h-screen xl:max-w-md bg-gray-500 xl:inline-block lg:hidden sm:hidden md:hidden xs:hidden">
+            <div class="flex items-center justify-center h-32 text-white text-center bg-gray-900 p-4">
+                <img src="/assets/img/logo.svg" alt="">
+                <h1 class="ml-6 text-4xl text-white font-bold leading-none">IoT Manager</h1>
+            </div>
+            <div class="flex-col items-start justify-start text-gray-700 text-center bg-gray-500 p-4 overflow-y-auto">
+                <h1 class="text-left text-white text-4xl font-bold">Device form</h1>
+                <h3 class="text-left text-white opacity-75 font-semibold text-2xl">Fill this form and add devices to monitorizing list</h3>
+        
+                <!-- Form Add Device -->
+                <form class="w-full mt-3 flex-col">
+                    <div class="mb-4">
+                        <label class="text-left block text-white opacity-75 text-2xl font-medium mb-2" for="name-device">
+                        Name
+                        </label>
+                        <input class="bg-gray-300 appearance-none border-3 border-gray-300 rounded w-full py-2 px-4 text-2xl text-white leading-tight  focus:border-gray-100 h-16" id="name-device" type="text" value="Jane Doe">
+                    </div>
+                    <div class="mb-4">
+                        <label class="text-left block text-white opacity-75 text-2xl font-medium mb-2" for="name-device">
+                        Image
+                        </label>
+                        <div class="inline-bloc relative w-full">
+                            <input class="bg-gray-300 appearance-none border-3 border-gray-300 rounded w-full py-2 px-4 text-2xl text-white leading-tight  focus:border-gray-100 h-16" id="name-device" />
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+                                <svg class="h-8 w-8 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="text-left block text-white opacity-75 text-2xl font-medium mb-2" for="name-device">
+                        Description
+                        </label>
+                        <textarea style="resize: none;" rows="3" class="bg-gray-300 appearance-none border-3 border-gray-300 rounded w-full py-2 px-4 text-2xl text-white leading-tight  focus:border-gray-100 max-h-md" id="name-device" ></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="text-left block text-white opacity-75 text-2xl font-medium mb-2" for="name-device">
+                        Monitorizing
+                        </label>
+                        <div class="inline-bloc relative w-full">
+                            <select class="bg-gray-300 appearance-none border-3 border-gray-300 rounded w-full py-2 px-4 text-2xl text-white leading-tight  focus:border-gray-100 h-16" id="name-device" >
+                                <option value="asd">Enabled</option>
+                                <option value="asd">Disabled</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+                                <svg class="h-8 w-8 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-indigo-100 hover:bg-indigo-300 text-white text-2xl font-bold py-2 px-4 mt-4 rounded h-16 w-full">
+                        Add Device
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        <!-- Container -->
+        <div class="flex-col w-full min-h-screen bg-gray-100">
+            
+            <!-- Navbar -->
+            <nav class="flex h-32 bg-white items-center justify-between px-10">
+
+                <!-- Input Autocomplete -->
+                <div class="w-1/2 xl:max-w-5xl">
+                    <div class="inline-block relative w-full">
+                        <input class="bg-gray-100  border-3 border-gray-100   rounded w-full py-2 px-4 text-2xl text-gray-900 leading-tight focus:border-gray-100 h-16" id="search-device" placeholder="Type to search by name..."/>
+                        <div id="img-search-input" class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-300">
+                            <svg class="h-6 w-6 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="w-1/2 md:w-2-4 flex justify-end">
+                    <button type="button" class="relative text-gray-900 mr-10 text-center">
+                        <svg class="h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/></svg>
+                    </button>
+
+                    <img src="/assets/img/avatar.png" alt="">
+                </div>
+            </nav>
+
+            <div class="h-full w-full py-4 px-8">
+                <!-- Pages -->
+                <router-outlet></router-outlet>
+            </div>
+
+
+        </div>        
+    </div>
+
+
+
+
+

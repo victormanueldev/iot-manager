@@ -12,11 +12,15 @@ module.exports = {
       green: '#54CC3B',
       red: '#F20D30',
       gray: {
-        100: '#F3F2FF',
-        300: '#b1adc0',
-        500: '#707070',
+        100: '#EDF2F6',
+        300: '#777297',
+        500: '#5B5775',
         700: '#686476',
+        800: "#727272",
         900: '#464353'
+      },
+      purple: {
+        100: "#E3E1FF"
       },
       white: '#ffffff'
     },
@@ -31,7 +35,7 @@ module.exports = {
     },
     screens: {
       'xs': '360px',
-      'sm': '640px',
+      'sm': '536px',
       // => @media (min-width: 640px) { ... }
 
       'md': '768px',

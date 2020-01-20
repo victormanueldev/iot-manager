@@ -1,1 +1,217 @@
-<p>home works!</p>
+<div class="flex-col bg-gray-100">
+    
+    <!-- Overall Status -->
+    <div >
+
+        <!-- Title -->
+        <h1 class="text-4xl text-gray-800 font-bold ml-4">Welcome to IoT Manager</h1>
+        <h3 class="text-left text-gray-800 opacity-75 font-semibold text-2xl  ml-4">Manage your devices and montitorize its status</h3>
+
+        <!-- Charts -->
+        <div class="flex xl:flex-row xs:flex-col sm:flex-col items-start justify-between">
+            <div class="w-1/2 sm:w-full  xs:w-full py-4">
+                <!-- Card 1 -->
+                <div class="flex sm:flex-row xs:flex-col rounded overflow-hidden shadow-lg bg-white px-8 py-6 m-4">
+                    <div class="sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 xs:w-full xs:p-0 sm:p-4 md:p-4 lg:p-4 xl:p-4 ">
+                        <div class="w-full sm:h-full md:h-full lg:h-full xl:h-full xs:h-40 bg-indigo-100"></div>
+                    </div>
+                    <div class="sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 xs:w-full  py-3">
+                        <div class="flex items-center">
+                            <div class="inline-block bg-gray-300 h-6 w-8 rounded mr-2"></div>
+                            <label class="text-gray-800 text-2xl">Fail</label>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="inline-block bg-indigo-100 h-6 w-8 rounded mr-2"></div>
+                            <label class="text-gray-800 text-2xl">OK</label>
+                        </div>
+                        <h2 class="text-xl  font-semibold text-gray-800 mt-2">Devices Overall Status</h2>
+                        <span class="text-lg font-normal text-gray-800">This is the actual status of your devices.</span>
+                        <br>
+                        <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-3">
+                            <svg class="inline-block w-4 h-4 fill-current pb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/></svg>
+                            Real time update</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/2 sm:w-full xs:w-full py-4">
+                <!-- Card 2 -->
+                <div class="flex sm:flex-row xs:flex-col rounded overflow-hidden shadow-lg bg-white px-8 py-6 m-4">
+                    <div class="sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 xs:w-full xs:p-0 sm:p-4 md:p-4 lg:p-4 xl:p-4 ">
+                        <div class="w-full sm:h-full md:h-full lg:h-full xl:h-full xs:h-40 bg-indigo-100"></div>
+                    </div>
+                    <div class="sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 xs:w-full  py-3">
+                        <div class="flex items-center">
+                            <div class="inline-block bg-gray-300 h-6 w-8 rounded mr-2"></div>
+                            <label class="text-gray-800 text-2xl">Disabled</label>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="inline-block bg-indigo-100 h-6 w-8 rounded mr-2"></div>
+                            <label class="text-gray-800 text-2xl">Enabled</label>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Devices Monitored</h2>
+                        <span class="text-lg font-normal text-gray-800">Devices currently monitored by
+                            IoT Manager.</span>
+                        <br>
+                        <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-3">
+                            <svg class="inline-block w-4 h-4 fill-current pb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/></svg>
+                            Real time update</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Devices List -->
+    <div>
+
+        <!-- Title -->
+        <div class="xl:flex lg:flex md:flex sm:flex  justify-between items-center">
+            <div class="w-1/2">
+                <h1 class="text-4xl text-gray-800 font-bold ml-4">Devices</h1>
+                <h3 class="text-left text-gray-800 opacity-75 font-semibold text-2xl  ml-4">List of your devices</h3>
+            </div>
+        
+            <!-- Navigation Buttons -->
+            <div class="w-1/2 flex xs:w-full xl:justify-end lg:justify-end md:justify-end sm:justify-end xs:justify-center pr-4">
+                <div class="inline-flex">
+                    <button class="bg-indigo-100 hover:bg-gray-400 text-lg text-white h-12 w-24 font-bold py-2 px-4 rounded-l">
+                      Prev
+                    </button>
+                    <button class="bg-indigo-100 hover:bg-gray-400 text-lg text-white h-12 w-24 font-bold py-2 px-4 rounded-r">
+                      Next
+                    </button>
+                  </div>
+                </div>
+        </div>
+
+        <!-- List -->
+        <div class="flex flex-wrap justify-start mt-3">
+
+            <div class="xl:w-1/5 lg:w-1/5 md:w-1/3 sm:w-full xs:w-full p-3">
+                <div class="flex-col rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full px-5 py-3 flex items-center">
+                        <div class="inline-block"> 
+                            <img  class="w-16 h-16" src="/assets/img/logo.svg" alt="">
+                        </div>
+                        <div class="inline-block ml-3">
+                            <span class="block text-lg font-semibold text-gray-800 leading-none ">Name Device asa</span>
+                            <span class="block bg-green px-3 py-1 rounded-full text-sm font-semibold mt-1 text-white">Status: OK 
+                                <svg class=" inline-block float-right w-4 h-4 pt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w-full px-5">
+                        <span class="text-md font-norma text-gray-800">Device description complete and so more...</span>
+                    </div>
+                    <div class="w-full px-5 pb-5 mt-1 flex justify-end ">
+                        <span class="block bg-purple-100 px-3 py-1 rounded-full text-xs  text-indigo-100 ">
+                            <svg class="w-4 h-4 inline-block fill-current pb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0 1 19.6 0A11 11 0 0 1 .2 10zm9.8 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+                            Monitoring
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-1/5 lg:w-1/5 md:w-1/3 sm:w-full xs:w-full p-3">
+                <div class="flex-col rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full px-5 py-3 flex items-center">
+                        <div class="inline-block"> 
+                            <img  class="w-16 h-16" src="/assets/img/logo.svg" alt="">
+                        </div>
+                        <div class="inline-block ml-3">
+                            <span class="block text-lg font-semibold text-gray-800 leading-none ">Name Device asa</span>
+                            <span class="block bg-green px-3 py-1 rounded-full text-sm font-semibold mt-1 text-white">Status: OK 
+                                <svg class=" inline-block float-right w-4 h-4 pt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w-full px-5">
+                        <span class="text-md font-norma text-gray-800">Device description complete and so more...</span>
+                    </div>
+                    <div class="w-full px-5 pb-5 mt-1 flex justify-end ">
+                        <span class="block bg-purple-100 px-3 py-1 rounded-full text-xs  text-indigo-100 ">
+                            <svg class="w-4 h-4 inline-block fill-current pb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0 1 19.6 0A11 11 0 0 1 .2 10zm9.8 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+                            Monitoring
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-1/5 lg:w-1/5 md:w-1/3 sm:w-full xs:w-full p-3">
+                <div class="flex-col rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full px-5 py-3 flex items-center">
+                        <div class="inline-block"> 
+                            <img  class="w-16 h-16" src="/assets/img/logo.svg" alt="">
+                        </div>
+                        <div class="inline-block ml-3">
+                            <span class="block text-lg font-semibold text-gray-800 leading-none ">Name Device asa</span>
+                            <span class="block bg-green px-3 py-1 rounded-full text-sm font-semibold mt-1 text-white">Status: OK 
+                                <svg class=" inline-block float-right w-4 h-4 pt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w-full px-5">
+                        <span class="text-md font-norma text-gray-800">Device description complete and so more...</span>
+                    </div>
+                    <div class="w-full px-5 pb-5 mt-1 flex justify-end ">
+                        <span class="block bg-purple-100 px-3 py-1 rounded-full text-xs  text-indigo-100 ">
+                            <svg class="w-4 h-4 inline-block fill-current pb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0 1 19.6 0A11 11 0 0 1 .2 10zm9.8 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+                            Monitoring
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-1/5 lg:w-1/5 md:w-1/3 sm:w-full xs:w-full p-3">
+                <div class="flex-col rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full px-5 py-3 flex items-center">
+                        <div class="inline-block"> 
+                            <img  class="w-16 h-16" src="/assets/img/logo.svg" alt="">
+                        </div>
+                        <div class="inline-block ml-3">
+                            <span class="block text-lg font-semibold text-gray-800 leading-none ">Name Device asa</span>
+                            <span class="block bg-green px-3 py-1 rounded-full text-sm font-semibold mt-1 text-white">Status: OK 
+                                <svg class=" inline-block float-right w-4 h-4 pt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w-full px-5">
+                        <span class="text-md font-norma text-gray-800">Device description complete and so more...</span>
+                    </div>
+                    <div class="w-full px-5 pb-5 mt-1 flex justify-end ">
+                        <span class="block bg-purple-100 px-3 py-1 rounded-full text-xs  text-indigo-100 ">
+                            <svg class="w-4 h-4 inline-block fill-current pb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0 1 19.6 0A11 11 0 0 1 .2 10zm9.8 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+                            Monitoring
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-1/5 lg:w-1/5 md:w-1/3 sm:w-full xs:w-full p-3">
+                <div class="flex-col rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full px-5 py-3 flex items-center">
+                        <div class="inline-block"> 
+                            <img  class="w-16 h-16" src="/assets/img/logo.svg" alt="">
+                        </div>
+                        <div class="inline-block ml-3">
+                            <span class="block text-lg font-semibold text-gray-800 leading-none ">Name Device asa</span>
+                            <span class="block bg-green px-3 py-1 rounded-full text-sm font-semibold mt-1 text-white">Status: OK 
+                                <svg class=" inline-block float-right w-4 h-4 pt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w-full px-5">
+                        <span class="text-md font-norma text-gray-800">Device description complete and so more...</span>
+                    </div>
+                    <div class="w-full px-5 pb-5 mt-1 flex justify-end ">
+                        <span class="block bg-purple-100 px-3 py-1 rounded-full text-xs  text-indigo-100 ">
+                            <svg class="w-4 h-4 inline-block fill-current pb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0 1 19.6 0A11 11 0 0 1 .2 10zm9.8 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+                            Monitoring
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
