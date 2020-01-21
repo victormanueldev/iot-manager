@@ -10,8 +10,10 @@ const routes: Routes = [
     children: [
       { path : 'login',   loadChildren : () => import('../../pages/login/login.module').then( m => m.LoginModule )},
       { path : 'signup',  loadChildren : () => import('../../pages/signup/signup.module').then( m => m.SignupModule )},
+      { path : '**',      redirectTo: '/auth/login' },
     ]
   },
+  { path : '**',      redirectTo: '/auth/login' },
 ]
 
 @NgModule({

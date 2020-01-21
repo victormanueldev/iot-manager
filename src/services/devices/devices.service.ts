@@ -19,12 +19,12 @@ export class DevicesService {
     this.devicesCollection = this.afs.collection<Device>('devices');
   }
 
-  getFirstDevices(): Observable<Device[]> {
-    return this.afs.collection<Device>('devices', ref => ref.orderBy('createdAt', 'desc').limit(5)).valueChanges();
+  getDevices(): Observable<Device[]> {
+    return this.afs.collection<Device>('devices', ref => ref.orderBy('createdAt', 'desc')).valueChanges();
   }
 
-  getDevicesPaginate(device: Device): Observable<Device[]> {
-    return this.afs.collection<Device>('devices', ref => ref.orderBy('createdAt', 'desc').startAfter(device.createdAt).limit(5)).valueChanges();
+  getDevice(id: string): Observable<Device> {
+    return this.devicesCollection.doc<Device>(id).valueChanges();
   }
 
   addDevices(device: Device): Promise<any> {
@@ -34,7 +34,7 @@ export class DevicesService {
     return this.devicesCollection.doc(id).set(device);
   }
 
-  updateDevice( device: Device): Promise<void> {
+  updateDevice( device: any): Promise<void> {
     return this.devicesCollection.doc(device.id).update(device)
   }
   
