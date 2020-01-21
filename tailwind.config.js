@@ -55,7 +55,8 @@ module.exports = {
       '0'     : 0,
       'auto'  : 'auto',
       '23'    : '23px',
-      '10'    : '10px'
+      '10'    : '10px',
+      '39'   : '-39px'
     },
     extend: {}
   },

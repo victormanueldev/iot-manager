@@ -89,39 +89,80 @@
 
                 <!-- Input Autocomplete -->
                 <div class="w-1/2 xl:max-w-5xl">
-                    <div class="block relative w-full">
-                        <input class="bg-gray-100  border-3 border-gray-100   rounded w-full py-2 px-4 text-2xl text-gray-900 leading-tight focus:border-gray-100 h-16" id="search-device" placeholder="Type to search by name..."/>
-                        <div id="img-search-input" class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-300">
-                            <svg class="h-6 w-6 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
+                    <div class="relative">
+                        <div class="block relative w-full">
+                            <input class="bg-gray-100  border-3 border-gray-100   rounded w-full py-2 px-4 text-2xl text-gray-900 leading-tight focus:border-gray-100 h-16" id="search-device" placeholder="Type to search by name..."/>
+                            <div id="img-search-input" class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-300">
+                                <svg class="h-6 w-6 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
+                            </div>
                         </div>
-                    </div>
-                    <div class="z-10 bg-white  w-64 max-h-md overflow-y-auto absolute rounded-lg">
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-                        <a href="#" class="block text-lg p-4">Name Device</a>
-
+                        <div class="z-10 bg-white w-full h-64 overflow-y-auto absolute rounded-lg shadow-md" [class.hidden]="true">
+                            <a href="#" class="block text-lg p-4 hover:bg-indigo-100 hover:text-white text-gray-900">Name Device</a>
+                            <a href="#" class="block text-lg p-4 hover:bg-indigo-100 hover:text-white text-gray-900">Name Device</a>
+                            <a href="#" class="block text-lg p-4 hover:bg-indigo-100 hover:text-white text-gray-900">Name Device</a>
+                            <a href="#" class="block text-lg p-4 hover:bg-indigo-100 hover:text-white text-gray-900">Name Device</a>
+    
+                        </div>
                     </div>
                 </div>
 
                 <!-- Buttons -->
                 <div class="w-1/2 md:w-2-4 flex justify-end">
-                    <button type="button" class="relative text-gray-900 mr-10 text-center">
-                        <svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/></svg>
-                    </button>
 
-                    <img class="w-10 h-10" src="/assets/img/avatar.png" alt="">
+                    <div class="relative">
+                        <button type="button" class="relative text-gray-900 mr-10 text-center">
+                            <svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/></svg>
+                        </button>
+                        <div class="z-10 bg-white w-auto h-2xl overflow-y-auto absolute rounded-lg right-39 p-4 shadow-md mt-2"  [class.hidden]="true">
+
+                            <button class="bg-indigo-200 w-full p-2 text-white rounded ">Mark all as read</button>
+
+                            <div class="w-64 max-w-3xl ml-2 p-2 bg-white items-center text-gray-900 leading-none flex lg:inline-flex " role="alert">
+                                <span class="mr-2 text-left font-semibold text-md">Device Marc Aut has been disabled</span>
+                                <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+                            </div>
+
+                            <div class="w-64 max-w-3xl ml-2 p-2 bg-white items-center text-gray-900 leading-none flex lg:inline-flex " role="alert">
+                                <span class="mr-2 text-left text-md">Device Marc Aut has been disabled</span>
+                                <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+                            </div>
+
+                            <div class="w-64 max-w-3xl ml-2 p-2 bg-white items-center text-gray-900 leading-none flex lg:inline-flex " role="alert">
+                                <span class="mr-2 text-left text-md">Device Marc Aut has been disabled</span>
+                                <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+                            </div>
+
+                            <div class="w-64 max-w-3xl ml-2 p-2 bg-white items-center text-gray-900 leading-none flex lg:inline-flex " role="alert">
+                                <span class="mr-2 text-left text-md">Device Marc Aut has been disabled</span>
+                                <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+                            </div>
+
+                            <div class="w-64 max-w-3xl ml-2 p-2 bg-white items-center text-gray-900 leading-none flex lg:inline-flex " role="alert">
+                                <span class="mr-2 text-left text-md">Device Marc Aut has been disabled</span>
+                                <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+                            </div>
+
+                            <div class="w-64 max-w-3xl ml-2 p-2 bg-white items-center text-gray-900 leading-none flex lg:inline-flex " role="alert">
+                                <span class="mr-2 text-left text-md">Device Marc Aut has been disabled</span>
+                                <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+                            </div>
+
+                            <div class="w-64 max-w-3xl ml-2 p-2 bg-white items-center text-gray-900 leading-none flex lg:inline-flex " role="alert">
+                                <span class="mr-2 text-left text-md">Device Marc Aut has been disabled</span>
+                                <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User options -->
+                    <div class="relative">
+                        <button>                        
+                            <img class="w-10 h-10" src="/assets/img/avatar.png" alt="">
+                        </button>
+                        <div class="z-10 bg-white w-56 h-20 overflow-y-auto absolute rounded-lg right-0 p-4 shadow-md mt-2"  [class.hidden]="true">
+                            <button class="bg-white w-full p-2 text-gray-900 font-semibold rounded ">Logout</button>
+                        </div>
+                    </div>
                 </div>
             </nav>
 
