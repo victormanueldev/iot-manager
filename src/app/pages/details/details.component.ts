@@ -24,6 +24,7 @@ export class DetailsComponent implements OnInit {
     this.route.paramMap.subscribe( (params) => {
       console.log(params['params'].id);
       this.obs$Device = this.deviceService.getDevice(params['params'].id).subscribe( val => {
+        console.log(val)
         this.device = val;
       });
       

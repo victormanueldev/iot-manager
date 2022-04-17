@@ -3,6 +3,7 @@ import { DevicesService } from 'src/services/devices/devices.service';
 import { Device } from 'src/interfaces/device.interface';
 import { Chart } from 'chart.js';
 import { range } from 'rxjs';
+import { NewDevices } from './devices';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('chartDevicesMonitoring', { static: false }) refChartDevicesMonitoring : ElementRef
 
   devices : Device[]  = [];
+  mewDevices: Device[] = NewDevices;
 
   // Chart Variables
   ctxChartOverallStatus     : CanvasRenderingContext2D  = null;
@@ -77,7 +79,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    // this.devices = this.mewDevices;
+    // const start = new Date(2012, 0 ,1)
+    // const end = new Date()
+    // this.devices = this.mewDevices.map(device => {
+    //   return {...device, createdAt: new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))}
+    // });
     // this.devices.forEach( async  device => {
     //   try {
     //     await this.devicesService.addDevices(device)
@@ -88,7 +94,6 @@ export class HomeComponent implements OnInit {
 
     this.devicesService.getDevices().subscribe( val => {
       console.log(val);
-      
       this.devices = val;
       this._drawCharts();
       this._paginatorSource();
